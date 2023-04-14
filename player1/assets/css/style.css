@@ -1,0 +1,187 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(2,2,2);
+    background: linear-gradient(28deg, rgba(2,2,2,1) 0%, rgba(9,9,9,1) 31%, rgba(66,66,66,1) 100%);
+    color: #FFF;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+th {
+    font-weight: 400;
+    font-size: 22px;
+}
+table td, th {
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    height: 100%;
+    background: #444;
+}
+.submarine {
+    background-image: url('../images/submarine.jpg');
+}
+.cruiser {
+    background-image: url('../images/cruiser.jpg');
+}
+.destroyer {
+    background-image: url('../images/destroyer.jpg');
+}
+.battleship {
+    background-image: url('../images/battleship.jpg');
+}
+
+.vessel {
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.missed {
+    background-color: #ff0000;
+    animation-name: missedship;
+    animation-duration: 2s;
+}
+
+#minitable td {
+    height: 35px;
+    
+}
+
+
+@keyframes missedship {
+    from {background-color: #444;}
+    to {background-color: red;}
+}
+
+.table-width {
+    width: 100%;
+}
+#minitable.table-width{
+    width: 450px;
+
+}
+
+#usernameDiv, #messagediv, #rightDiv, #leftDiv {
+    display: inline-block;
+}
+#mainDiv {
+    position: relative;
+}
+#messagediv {
+    border: 1px dashed darkblue;
+    padding: 5px;
+}
+#leftDiv {
+    min-width: 370px;
+    min-height: 370px;
+    width: 70%;
+}
+#rightDiv {
+    min-width: 150px;
+    margin-left: 25px;
+}
+#buttondiv, #examplediv {
+    text-align: center;
+}
+.Button {
+    margin-top: 15px;
+    background-color: #0000FF;
+    color: #FFF;
+    background:linear-gradient(to bottom, #33bdef 5%, #3ab6e0 100%);
+    background-color:#33bdef;
+    border-radius: 4px;
+    border:1px solid #4cb7ff;
+    text-shadow:0px 2px 0px #5b6178;
+    padding:3px 3px;
+    font-size:18px;
+    font-weight:bold;
+}
+#rightDiv, #leftDiv {
+    height: 100%;
+    vertical-align: top;
+}
+#messagediv {
+    width: 100%;
+    height: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+.smalltable{
+    width: 100%;
+    height: 100%;
+    height: 300px;
+    overflow-y: auto;    
+}
+@media only screen and (max-width: 650px) {
+    .table-width {
+        width: 98%;
+    }
+    .vessel {
+        height: 40px;
+        width: 40px;
+        font-size: 8px;
+    }
+
+    #rightDiv {
+        width: 95%;
+        margin: 2px auto;
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .table-width {
+        width: 98%;
+    }
+    .vessel {
+        height: 30px;
+        width: 30px;
+        font-size: 5px;
+    }
+    #messagediv {
+        width: 100%;
+        height: 100%;
+    }
+
+    #rightDiv {
+        width: 95%;
+        margin: 2px auto;
+        height: 90px;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1)
+ {
+    .table-width {
+        width: 100%;
+    }
+    #leftDiv {
+        width: 60%;
+    }
+    #rightDiv {
+        width: 35%;
+        margin-left: 5px;
+        height: 170px;
+    }
+    .vessel {
+        height: 20px;
+        width: 20px;
+        font-size: 5px;
+    }
+    #messagediv {
+        width: 100%;
+        height: 100%;
+    }
+}
